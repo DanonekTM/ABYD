@@ -1,0 +1,19 @@
+language: php
+
+sudo: false
+
+php:
+    - 7.0
+    - 7.1
+    - 7.2
+    - 7.3
+
+before_install:
+  - wget https://yt-dl.org/downloads/latest/youtube-dl -O $PWD/youtube-dl --no-check-certificate
+  - export PATH=$PATH:$PWD/
+
+before_script:
+    - composer install --no-interaction --prefer-source
+
+script:
+    - phpunit
