@@ -4,6 +4,7 @@ Class Controller
 {
 	public static function handleLogin($userLogin, $userPassword)
 	{
+		// Add your credentials here :)
 		$credentials = array(
 			"Danonek" => "123"
 		);
