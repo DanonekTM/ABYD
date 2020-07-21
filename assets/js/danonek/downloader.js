@@ -96,6 +96,13 @@ function sendABYDRequest(id, link)
 				}
 				processingLink = false;
 			}
+		},
+		error:function()
+		{
+			hideMessage();
+			document.getElementById("error").style.display = "block";
+			error.innerHTML = "<strong>Error!</strong> Unauthorized.";
+			processingLink = false;
 		}
 	});
 }
